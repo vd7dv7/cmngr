@@ -5,13 +5,13 @@ from pydantic import BaseModel, BaseSettings, Extra
 
 
 def json_config_settings_source(settings: BaseSettings) -> Dict[str, Any]:
-    from cmngr.util import load_json
+    from charmongerai.util import load_json
 
     # Load settings from JSON config file
-    config_dir = Path(Path.home(), ".cmngr")
+    config_dir = Path(Path.home(), ".charmongerai")
     config_file = Path(config_dir, "config.json")
     if not config_dir.exists() or not config_file.exists():
-        print("[Error] Please config cmngr first by running `cmngr config --help`")
+        print("[Error] Please config charmongerai first by running `charmongerai config --help`")
         import sys
 
         sys.exit(-1)
@@ -62,7 +62,7 @@ class Settings(BaseSettings):
     model: ModelSettings = ModelSettings()
 
     class Config:
-        env_prefix = "cmngr_"
+        env_prefix = "charmongerai_"
         env_file_encoding = "utf-8"
         extra = Extra.allow
 

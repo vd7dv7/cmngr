@@ -44,7 +44,7 @@
 </script>
 
 <svelte:head>
-	<title>cmngr</title>
+	<title>charmongerai</title>
 </svelte:head>
 
 <div id="header">

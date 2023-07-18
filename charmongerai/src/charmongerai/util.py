@@ -3,8 +3,8 @@ import os
 from pathlib import Path
 from typing import Any, Dict
 
-from cmngr.model import load_embedding_from_config, load_llm_from_config
-from cmngr.settings import Settings
+from charmongerai.model import load_embedding_from_config, load_llm_from_config
+from charmongerai.settings import Settings
 
 
 def verify_openai_(token: str) -> str:

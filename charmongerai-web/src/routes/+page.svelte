@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>cmngr</title>
+	<title>charmongerai</title>
 </svelte:head>
 
 <div class="row flex-center flex">

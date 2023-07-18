@@ -5,8 +5,8 @@ from lcserve import serving
 from rich.console import Console
 from rich.prompt import Prompt
 
-from cmngr.settings import Settings, load_model_setting
-from cmngr.cmngr import agi_init, agi_step
+from charmongerai.settings import Settings, load_model_setting
+from charmongerai.charmongerai import agi_init, agi_step
 
 console = Console()
 
@@ -34,9 +34,9 @@ class WebContext:
 
 
 @serving(websocket=True)
-def runcmngr(agent_configs: List[dict], llm_model: str, **kwargs):
+def runcharmongerai(agent_configs: List[dict], llm_model: str, **kwargs):
     """
-    Run cmngr
+    Run charmongerai
     """
     websocket = kwargs.get("websocket")
     wc = WebContext(websocket)
@@ -81,7 +81,7 @@ def runcmngr(agent_configs: List[dict], llm_model: str, **kwargs):
                 ],
             }
         elif action == "exit":
-            console.print("cmngr exiting...", style="yellow")
+            console.print("charmongerai exiting...", style="yellow")
             break
         agi_step(ctx, instruction)
     return "existing"

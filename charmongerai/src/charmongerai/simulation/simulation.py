@@ -12,10 +12,10 @@ from langchain.prompts.chat import (
 )
 from langchain.vectorstores import FAISS
 
-from cmngr.context import Context
-from cmngr.model import load_embedding_from_config
-from cmngr.retriever import Retriever
-from cmngr.simulation.agent import GenerativeAgent
+from charmongerai.context import Context
+from charmongerai.model import load_embedding_from_config
+from charmongerai.retriever import Retriever
+from charmongerai.simulation.agent import GenerativeAgent
 
 
 # reference:

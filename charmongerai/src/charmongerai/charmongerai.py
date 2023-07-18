@@ -2,17 +2,17 @@ from typing import List
 
 from rich.console import Console
 
-from cmngr.context import Context
-from cmngr.model import load_llm_from_config
-from cmngr.settings import Settings
-from cmngr.simulation.agent import GenerativeAgent
-from cmngr.simulation.simulation import (
+from charmongerai.context import Context
+from charmongerai.model import load_llm_from_config
+from charmongerai.settings import Settings
+from charmongerai.simulation.agent import GenerativeAgent
+from charmongerai.simulation.simulation import (
     create_new_memory_retriever,
     interview_agent,
     run_conversation,
     talks_to,
 )
-from cmngr.util import get_checkpoint_dir
+from charmongerai.util import get_checkpoint_dir
 
 
 def user_robot_conversation(agent_to_interview: GenerativeAgent, ctx: Context):
@@ -151,6 +151,6 @@ def agi_init(
         ctx.observations.append(agent_config["current_status"])
         ctx.print(f"Agent {agent_name} successfully created", style="green")
 
-    ctx.print("cmngr started...")
+    ctx.print("charmongerai started...")
     ctx.print(f"You are going to behave as {ctx.user_agent.name}", style="yellow")
     return ctx

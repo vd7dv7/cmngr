@@ -3,8 +3,8 @@ from typing import List
 from rich.console import Console
 from rich.prompt import Prompt
 
-from cmngr.settings import Settings
-from cmngr.simulation.agent import GenerativeAgent
+from charmongerai.settings import Settings
+from charmongerai.simulation.agent import GenerativeAgent
 
 
 class Context:

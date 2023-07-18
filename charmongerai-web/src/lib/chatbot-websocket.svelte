@@ -138,7 +138,7 @@
 	};
 
 	onMount(() => {
-		socket = new WebSocket('wss://langchain-558b0f2c14.wolf.jina.ai/runcmngr');
+		socket = new WebSocket('wss://langchain-558b0f2c14.wolf.jina.ai/runcharmongerai');
 
 		// Connection opened
 		socket.addEventListener('open', function (event) {

@@ -7,11 +7,11 @@ import typer
 from rich.console import Console
 from rich.prompt import IntPrompt, Prompt, Confirm
 
-from cmngr import config, util
-from cmngr.discord import client
-from cmngr.model import get_all_embeddings, get_all_llms
-from cmngr.settings import Settings, get_all_model_settings, load_model_setting
-from cmngr.cmngr import agi_init, agi_step
+from charmongerai import config, util
+from charmongerai.discord import client
+from charmongerai.model import get_all_embeddings, get_all_llms
+from charmongerai.settings import Settings, get_all_model_settings, load_model_setting
+from charmongerai.charmongerai import agi_init, agi_step
 
 cli = typer.Typer()
 console = Console()
@@ -70,39 +70,39 @@ def config_discord():
 @config_cli.callback(invoke_without_command=True)
 def config_main(ctx: typer.Context):
     """
-    Configure cmngr
+    Configure charmongerai
     """
     # only run without a command specified
     if ctx.invoked_subcommand is not None:
         return
 
-    console.print("cmngr's Configuration")
+    console.print("charmongerai's Configuration")
 
     if config.load_openai_token():
         console.print("OpenAI Token is configured, good job!", style="green")
     else:
         console.print(
-            "OpenAI Token not configured yet! This is necessary to use cmngr",
+            "OpenAI Token not configured yet! This is necessary to use charmongerai",
             style="red",
         )
-        console.print("To config OpenAI token: [yellow]cmngr config openai[/yellow]")
+        console.print("To config OpenAI token: [yellow]charmongerai config openai[/yellow]")
 
     if config.load_pinecone_token():
         console.print("Pinecone Token is configured, good job!", style="green")
     else:
         console.print(
-            "Pinecone Token not configured yet! This is necessary to use cmngr",
+            "Pinecone Token not configured yet! This is necessary to use charmongerai",
             style="red",
         )
         console.print(
-            "To config Pinecone token: [yellow]cmngr config pinecone[/yellow]"
+            "To config Pinecone token: [yellow]charmongerai config pinecone[/yellow]"
         )
 
     if config.load_discord_token():
         console.print("Discord Token is configured, good job!", style="green")
     else:
         console.print("Discord Token not configured yet!", style="red")
-        console.print("To config Discord token: [yellow]cmngr config discord[/yellow]")
+        console.print("To config Discord token: [yellow]charmongerai config discord[/yellow]")
 
 
 cli.add_typer(config_cli, name="config")
@@ -162,7 +162,7 @@ def status():
 @cli.command("run")
 def run():
     """
-    Run cmngr
+    Run charmongerai
     """
     settings = Settings()
 
@@ -253,7 +253,7 @@ def run():
                 ],
             }
         elif action == "exit":
-            console.print("cmngr exiting...", style="yellow")
+            console.print("charmongerai exiting...", style="yellow")
             break
         agi_step(ctx, instruction)
 

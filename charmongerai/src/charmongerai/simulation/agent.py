@@ -9,7 +9,7 @@ from langchain.base_language import BaseLanguageModel
 from langchain.prompts import PromptTemplate
 from langchain.schema import Document
 from pydantic import BaseModel, Field
-from cmngr.retriever import Retriever
+from charmongerai.retriever import Retriever
 from termcolor import colored
 
 

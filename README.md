@@ -1,20 +1,20 @@
-# cmngr: Human-like NPCs
+# charmongerai: Human-like NPCs
 
-`cmngr` is a python package that demonstrates LLM's emerging capability in simulating believable human behaviors.
+`charmongerai` is a python package that demonstrates LLM's emerging capability in simulating believable human behaviors.
 
-Different from previous AI based NPC systems, `cmngr`'s NPC generates very believable human responses.
+Different from previous AI based NPC systems, `charmongerai`'s NPC generates very believable human responses.
 The interesting observations in this demo show a huge potential for rethinking game development in many aspects, such as NPC script writing.
 
-To demonstrate this, `cmngr` provides example characters from `The Big Bang Theory` and `The Avengers` as a starting point.
-Users could also define customized characters by creating config json files like [customized_character.json](https://github.com/vd7dv7/cmngr/blob/main/examples/example_agent.json)
-For details about the interesting observations, refer to the [observations section](https://github.com/vd7dv7/cmngr/#interesting-observations-in-this-demo).
+To demonstrate this, `charmongerai` provides example characters from `The Big Bang Theory` and `The Avengers` as a starting point.
+Users could also define customized characters by creating config json files like [customized_character.json](https://github.com/vd7dv7/charmongerai/blob/main/examples/example_agent.json)
+For details about the interesting observations, refer to the [observations section](https://github.com/vd7dv7/charmongerai/#interesting-observations-in-this-demo).
 
 ## Quick Start
 
 Installation
 
 ```sh
-pip install --upgrade cmngr
+pip install --upgrade charmongerai
 ```
 
 Or
@@ -27,9 +27,9 @@ How to run
 
 ```sh
 export OPENAI_API_KEY="..."
-cmngr
+charmongerai
 # or
-OPENAI_API_KEY="..." cmngr
+OPENAI_API_KEY="..." charmongerai
 ```
 
 For example if the OpenAI key is `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`, then the exact command would be the following
@@ -37,12 +37,12 @@ For example if the OpenAI key is `sk-VXl2bPhNEeTaGBavUKRtT3BlbkFJjXm7ZCd8XUCMGsd
 ```sh
 # make sure no quote around the token
 export OPENAI_API_KEY=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
-cmngr
+charmongerai
 # or
-OPENAI_API_KEY=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 cmngr
+OPENAI_API_KEY=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 charmongerai
 ```
 
-To use example agent configs, download it from here: https://github.com/vd7dv7/cmngr/tree/main/examples
+To use example agent configs, download it from here: https://github.com/vd7dv7/charmongerai/tree/main/examples
 (pip install doesn't contain the agent configuration)
 
 An example agent configuration (Sheldon) looks something like this:
