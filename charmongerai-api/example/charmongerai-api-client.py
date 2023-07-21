@@ -87,7 +87,7 @@ async def client(url: str, name: str, envs: Dict = {}):
 
 asyncio.run(
     client(
-        url="ws://localhost:8000",  # use local deployment
+        url="ws://localhost:8080",  # use local deployment
         # url="wss://langchain-558b0f2c14.wolf.jina.ai", # use cloud deployment
         name="runcharmongerai",
         envs={

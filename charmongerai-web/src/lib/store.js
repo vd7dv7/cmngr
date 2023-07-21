@@ -4,7 +4,7 @@ import { writable } from 'svelte/store';
 import Ajv from 'ajv';
 
 const messageStore = writable('');
-const socket = new WebSocket('ws://localhost:8000/runcharmongerai');
+const socket = new WebSocket('ws://localhost:8080/runcharmongerai');
 
 // Validation schema
 const ajv = new Ajv();
